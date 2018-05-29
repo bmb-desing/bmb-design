@@ -10,8 +10,8 @@
               <span v-if="errors.has(value.vvName) && error" class="modal__error">{{ errors.first(value.vvName) }}</span>
             </div>
             <div class="modal__text">
-              Отправляя форму, вы даете свое согласие на <a href="#">обработку персональных данных</a> и соглашаюсь с условиями
-                <a href="#">политики конфиденциальности</a>
+              Отправляя форму, вы даете свое согласие на <nuxt-link to="/obrabotka-personalnyh-dannyh" target="_blank">обработку персональных данных</nuxt-link> и соглашаюсь с условиями
+              <nuxt-link to="/" target="_blank">политики конфиденциальности</nuxt-link>
             </div>
             <button class="modal__button">Отправить</button>
           </form>
