@@ -5,7 +5,8 @@
         <div class="error__content">
           <div class="error__left">
             <h1 class="error__title">Ошибка {{error.statusCode}}</h1>
-            <div class="error__text">Страница не найдена, если вы уверенны что она существует, пожалуйста, сообщите нам об ошибке, и мы исправим все в ближайщее время и известим вас об этом</div>
+            <div class="error__text">Страница не найдена, если вы уверенны что она существует, пожалуйста, сообщите нам об ошибке (вы можете это сделать нажатием на кнопку "Сообщить об ошибке" или отправив E-mail на почту
+              <a href="mailto:support@bmb-design.ru" style="color: #ecc84c; text-decoration: none;">support@bmb-design.ru</a>). </div>
             <div class="error__buttons">
               <nuxt-link to="/" class="error__button error__button_index">На главную</nuxt-link>
               <button class="error__button error__button_callback" @click="getEmail">Сообщить об ошибке</button>
