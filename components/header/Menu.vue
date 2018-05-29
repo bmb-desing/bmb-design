@@ -1,0 +1,153 @@
+<template>
+  <transition name="menu">
+    <div class="menu">
+      <div class="menu__container">
+        <div class="menu__content">
+          <nav class="menu__left">
+            <ul>
+              <nuxt-link :to="item.link" tag="li" class="menu__item" v-for="(item, k) in menu" :key="k">
+                <span @click.prevent="getMenu(item.link, k)">{{item.text}}</span>
+              </nuxt-link>
+            </ul>
+          </nav>
+          <div class="menu__center">
+            <div class="sub__menu" v-for="(item, k) in menu" v-if="k + 1 == activeMenu && item.submenu" :key="k">
+              <ul>
+                <nuxt-link :to="item.link + '' + val.link" tag="li" class="menu__item" exact v-for="(val, i) in item.submenu" :key="i">
+                  <a>{{val.text}}</a>
+                </nuxt-link>
+              </ul>
+            </div>
+          </div>
+          <div class="menu__contacts">
+            <p>123</p>
+          </div>
+        </div>
+      </div>
+      <div class="menu__footer">
+
+      </div>
+    </div>
+  </transition>
+</template>
+
+<script>
+	export default {
+		name: "head-menu",
+    data() {
+		  return {
+		    activeMenu: false,
+		    menu: [
+          {
+            link: '/web',
+            text: 'Сайты',
+            click: 0,
+            submenu: [
+              {
+                link: '/landing-page',
+                text: 'Landing-page'
+              },
+              {
+                link: 'internet-magazine',
+                text: 'Интернет-магазин'
+              }
+            ]
+          },
+          {
+            link: '/logo',
+            text: 'Логотипы',
+            click: 0,
+          },
+          {
+            link: '/advertising',
+            text: 'Реклама',
+            click: 0,
+          },
+          {
+            link: '/technical-support',
+            text: 'Тех.поддержка',
+            click: 0,
+          },
+          {
+            link: '/about',
+            text: 'О нас',
+            click: 0,
+            submenu: [
+              {
+                link: '/blog',
+                text: 'Новости'
+              },
+              {
+                link: '/review',
+                text: 'Отзывы'
+              }
+            ]
+          },
+          {
+            link: '/contacts',
+            text: 'Контакты',
+            click: 0,
+          }
+        ]
+      }
+    },
+    methods: {
+		  getMenu(link, index) {
+		    if(!this.menu[index].submenu) {
+		      this.$router.replace(link)
+        }
+        else if (this.menu[index].click == 1) {
+          this.$router.replace(link)
+        }
+        else {
+		      this.menu[index].click = this.menu[index].click + 1
+          const vm = this
+          const oldActiveMenu = this.activeMenu
+          this.activeMenu = index + 1
+          setTimeout(function () {
+            vm.menu[index].click = 0
+          }, 500)
+        }
+      },
+      replaceActiveSubmenu(path) {
+        if (path == '/') {
+          return this.activeMenu = false
+        }
+        var indexs
+        this.menu.map((item, index) => {
+          const isActive = path.indexOf(item.link) + 1
+          if (isActive) {
+            indexs = index + 1
+          }
+        })
+        return this.activeMenu = indexs || false
+      }
+    },
+    created: function () {
+      const path = this.$route.path;
+      this.replaceActiveSubmenu(path);
+      const body = document.getElementsByClassName('body')[0];
+      body.classList.add('blur');
+    },
+    mounted: function () {
+      this.$router.afterEach((r) => {
+        const path = this.$route.path;
+        this.replaceActiveSubmenu(path)
+      })
+    },
+    beforeDestroy: function () {
+      const body = document.getElementsByClassName('body')[0];
+      body.classList.remove('blur');
+    }
+	}
+</script>
+
+<style scoped lang="sass">
+  @import "../../assets/sass/components/menu/index"
+  .menu-enter-active, .menu-leave-active
+    transition: max-height .25s
+  .menu-enter
+    max-height: 0
+  .menu-leave-to
+    max-height: 0
+</style>

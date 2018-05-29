@@ -1,0 +1,47 @@
+@import "../../setting"
+.header__map
+  position: fixed
+  z-index: 899
+  top: 80px
+  overflow: hidden
+  bottom: 0
+  height: auto
+  max-height: 100%
+  left: 0
+  width: 100%
+  background-color: rgba(#000, .8)
+  &__footer
+    position: fixed
+    z-index: 900
+    bottom: 0
+    height: 40px
+    left: 0
+    right: 0
+    opacity: 1
+    background-color: #a35100
+    cursor: pointer
+    text-align: center
+    line-height: 40px
+    text-transform: uppercase
+    color: #fff
+    transition: all .25s
+    &:hover
+      background-color: darken(#a35100, 5%)
+  .content
+    .ymap-container
+      position: relative
+      z-index: 900
+  &__preloader
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 0
+    right: 0
+    z-index: 899
+    text-align: center
+    +fz(16)
+    font-weight: 300
+    color: #fff
+    p
+      margin: 0
+      margin-top: 10px

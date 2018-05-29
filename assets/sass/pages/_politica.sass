@@ -1,0 +1,33 @@
+@import "../setting"
+.politica
+  background-image: url(/img/system/obrabotka-personalnyh-dannyh.jpg)
+  -webkit-background-size: cover
+  background-size: cover
+  background-position: center
+  min-height: 100vh
+  display: flex
+  align-items: center
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    background-color: rgba(#000, .8)
+  &__wrapper
+    max-width: 1190px
+    padding: 80px 10px 20px
+    width: 100%
+    margin: 0 auto
+    color: #fff
+    position: relative
+    z-index: 3
+  
+  li
+    +fz(15)
+  h1
+    +fz(25)
+    text-align: center
+

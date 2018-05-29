@@ -1,0 +1,97 @@
+@import "../../setting"
+.menu
+  position: fixed
+  z-index: 899
+  top: 80px
+  max-height: 100vh
+  overflow: hidden
+  bottom: 0
+  background-color: rgba(#000, .8)
+  left: 0
+  right: 0
+  &__container
+    max-width: 1170px
+    width: 100%
+    margin: 0 auto
+    position: relative
+    z-index: 899
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+  &__content
+    padding: 10vh 0
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__left
+    border-right: 1px solid rgba(#fff, .4)
+    flex-basis: (100/3) + 0%
+    li
+      span, a
+        margin-bottom: 5vh
+        cursor: pointer
+        position: relative
+      &:last-child
+        span
+          margin-bottom: 0
+      &.active
+        a, span
+          color: #ecc84c
+          &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            top: 0
+            width: 3px
+            right: -2px
+            background-color: #ecc84c
+          &:hover
+            color: #ecc84c
+      a, span
+        font-size: 5vh
+        text-decoration: none
+        color: #fff
+        position: relative
+        display: block
+        transition: all .25s
+        &:hover
+          color: lighten(#ecc84c, 10%)
+  &__center
+    flex-basis: (100/3) + 0%
+    overflow: auto
+    padding-left: 40px
+    li
+      span, a
+        margin-bottom: 3vh
+        cursor: pointer
+        position: relative
+      &:last-child
+        span
+          margin-bottom: 0
+      &.active
+        a, span
+          color: #ecc84c
+          &:hover
+            color: #ecc84c
+      a, span
+        font-size: 3vh
+        text-decoration: none
+        color: #fff
+        position: relative
+        display: block
+        transition: all .25s
+        &:hover
+          color: lighten(#ecc84c, 10%)
+
+  &__contacts
+    flex-basis: (100/3) + 0%
+    align-self: flex-end
+  &__footer
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    border-top: 1px solid rgba(#fff, .4)
+    height: 60px

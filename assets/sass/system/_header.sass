@@ -1,0 +1,203 @@
+@import "../setting"
+.header
+  position: fixed
+  z-index: 900
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  background-color: rgba(#000, .8)
+  &__burger
+    cursor: pointer
+
+  &__container
+    max-width: 1170px
+    width: 100%
+    margin: 0 auto
+    height: 80px
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logo
+    img
+      vertical-align: middle
+  &__map
+    span
+      +fz(18)
+      color: #ffffff
+      text-decoration: none
+      letter-spacing: 0.5px
+      transition: all .25s
+      cursor: pointer
+      display: inline-block
+      &:hover
+        animation: linkAnimation 2.5s linear infinite
+    button
+      display: block
+      margin: 0 auto
+      margin-top: 5px
+      border: none
+      background-color: transparent
+      color: #a35100
+      text-transform: uppercase
+      cursor: pointer
+      +fz(11)
+      font-weight: bold
+      transition: all .25s
+      &:hover
+        background-color: #a35100
+        color: #fff
+  &__phone
+    a, span
+      +fz(18)
+      color: #ffffff
+      text-decoration: none
+      letter-spacing: .5px
+      display: inline-block
+      transition: all .25s
+      &:hover
+        animation: linkAnimation 2.5s linear infinite
+  &__time
+    margin: 0
+    padding: 0
+    position: relative
+    margin-top: 5px
+    cursor: pointer
+    +fz(10)
+    text-align: right
+    text-transform: uppercase
+    svg
+      width: 11px
+      transform: rotate(90deg)
+      margin-left: 5px
+      vertical-align: middle
+      transition: all .25s
+    &.green
+      color: green
+      svg
+        fill: green
+    &.red
+      color: #a35100
+      svg
+        fill: #a35100
+    &.active
+      svg
+        transform: rotate(-90deg)
+  &__logo
+    img
+      vertical-align: middle
+    &_small
+      display: none
+
+.header__burger
+  .burger
+    text-align: center
+    &__item
+      width: 28px
+      height: 4px
+      background-color: #fff
+      margin-bottom: 8px
+      transition: all .5s
+      &_third
+        margin-bottom: 0
+  &:hover, &.active
+    .burger__item
+      &_first
+        width: 28px
+        background-color: #ecc84c
+      &_second
+        width: 20px
+        background-color: #5c5edc
+      &_third
+        width: 9px
+        background-color: #a35100
+
+  @keyframes linkAnimation
+    0%
+      color: #ecc84c
+      transform: scale(1)
+    25%
+      color: #5c5edc
+      transform: scale(1.05)
+    50%
+      color: #a35100
+      transform: scale(1)
+    75%
+      color: #5c5edc
+      transform: scale(1.05)
+    100%
+      color: #ecc84c
+      transform: scale(1)
+  @keyframes firstBurger
+    0%
+      background-color: #ffffff
+      transform: scaleX(1)
+    50%
+      background-color: #ecc84c
+      transform: scaleX(.5)
+    100%
+      background-color: #fff
+      transform: scaleX(1)
+
+  @keyframes secondBurger
+    0%
+      background-color: #fff
+      transform: scaleX(1)
+    50%
+      background-color: #5c5edc
+      transform: scaleX(.5)
+    100%
+      background-color: #fff
+      transform: scaleX(1)
+  @keyframes thirdBurger
+    0%
+      background-color: #fff
+      transform: scaleX(1)
+    50%
+      background-color: #a35100
+      transform: scaleX(.5)
+    100%
+      transform: scaleX(1)
+      background-color: #fff
+
+@media screen and (max-width: 1170px)
+  .header
+    &__container
+      padding: 0 10px
+@media screen and (max-width: 768px)
+  .header
+    &__map
+      display: none
+    &__logo
+      flex-basis: 40%
+      text-align: center
+      &_big
+        display: none
+      &_small
+        display: block
+    &__burger
+      flex-basis: 30%
+      text-align: left
+    &__phone
+      flex-basis: 30%
+      text-align: right
+      a, span
+        +fz(14)
+    &__container
+      height: 60px
+      justify-content: center
+@media screen and (max-width: 480px)
+  .header
+    &__logo
+      flex-basis: 30%
+      text-align: right
+      img
+        margin-right: 0
+        margin-left: auto
+    &__phone
+      flex-basis: 50%
+    &__burger
+      flex-basis: 20%
+    &__container
+      justify-content: space-between
