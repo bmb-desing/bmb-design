@@ -1,36 +1,49 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
-      <h1 class="title">
-        bmb-design
-      </h1>
-      <nuxt-link to="/store">123</nuxt-link>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <sliders :slider="slider"></sliders>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
-export default {
-  components: {
-    AppLogo
+  import Sliders from '~/components/index/Slider'
+  export default {
+    components: {
+      Sliders
+    },
+    data() {
+      return {
+        slider: [
+          {
+            title: 'Заказать сайт',
+            text: 'Создадим сайт, логотип, рекламу,<br/>с анализом вашего бизнеса от 10.000<br/> рублей от 6 дней',
+            image: '/img/slider/slide-1.jpg'
+          },
+          {
+            title: 'Заказать сайт',
+            text: 'Создадим сайт, логотип, рекламу,<br/>с анализом вашего бизнеса от 10.000<br/> рублей от 6 дней',
+            image: '/img/slider/slide-1.jpg'
+          },
+          {
+            title: 'Заказать сайт',
+            text: 'Создадим сайт, логотип, рекламу,<br/>с анализом вашего бизнеса от 10.000<br/> рублей от 6 дней',
+            image: '/img/slider/slide-1.jpg'
+          },
+          {
+            title: 'Заказать сайт',
+            text: 'Создадим сайт, логотип, рекламу,<br/>с анализом вашего бизнеса от 10.000<br/> рублей от 6 дней',
+            image: '/img/slider/slide-1.jpg'
+          },
+          {
+            title: 'Заказать сайт',
+            text: 'Создадим сайт, логотип, рекламу,<br/>с анализом вашего бизнеса от 10.000<br/> рублей от 6 дней',
+            image: '/img/slider/slide-1.jpg'
+          },
+        ]
+      }
+    }
   }
-}
 </script>
 
 <style>

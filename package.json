@@ -14,8 +14,10 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "jquery": "^3.3.1",
     "nuxt": "^1.0.0",
     "nuxt-validate": "^0.1.1",
+    "vue-slick": "^1.1.12",
     "vue-yandex-maps": "^0.7.9"
   },
   "devDependencies": {

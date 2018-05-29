@@ -37,6 +37,9 @@ module.exports = {
   css: [
     { src: '~/assets/sass/main.sass', lang: 'sass' }
   ],
+  plugins: [
+    { src: '~/plugins/slider', ssr: false },
+  ],
   build: {
     extractCSS: true,
     /*

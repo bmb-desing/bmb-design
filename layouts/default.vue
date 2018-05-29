@@ -27,6 +27,8 @@
 <style scoped lang="sass">
   .body
     transition: all .25s
+    max-width: 100vw
+    overflow: hidden
   .blur
     filter: blur(5px)
   .body-error

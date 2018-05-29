@@ -31,7 +31,7 @@
           <span class="red" :class="getDay(0) ? 'current' : ''">Выходной</span>
         </li>
       </ul>
-      <button @click="showForm">Обратный звонок</button>
+      <button @click="showForm('Обратный звонок')">Обратный звонок</button>
     </div>
   </transition>
 </template>

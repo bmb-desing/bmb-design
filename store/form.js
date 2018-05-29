@@ -5,6 +5,7 @@ export default {
     statusCode: null,
     showForm: false,
     message: null,
+    theme: null,
     formInputs: {
       title: 'Отправить заявку',
       form: {
@@ -50,8 +51,10 @@ export default {
 
   },
   mutations: {
-    mutationShowForm: (state) => {
-      return state.showForm = state.showForm ? false : true
+    mutationShowForm: (state, payload) => {
+      state.showForm = state.showForm ? false : true
+      state.theme = payload
+      return state
     },
     mutationFormInput: (state, payload) => {
       return state.formInputs = payload
