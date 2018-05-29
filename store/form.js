@@ -27,7 +27,7 @@ export default {
           name: 'email',
           value: '',
           vvName: 'E-mail',
-          validate: 'required|email'
+          validate: 'email'
         }
       }
     },

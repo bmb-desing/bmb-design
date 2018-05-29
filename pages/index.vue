@@ -2,18 +2,39 @@
   <section class="container">
     <div>
       <sliders :slider="slider"></sliders>
+      <uslugi :uslugi="uslugi"></uslugi>
     </div>
   </section>
 </template>
 
 <script>
   import Sliders from '~/components/index/Slider'
+  import Uslugi from '~/components/index/Uslugi'
   export default {
     components: {
-      Sliders
+      Sliders,
+      Uslugi
     },
     data() {
       return {
+        uslugi: [
+          {
+            title: 'СОЗДАНИЕ ЛОГОТИПА',
+            link: '/logo'
+          },
+          {
+            title: 'СОЗДАНИЕ Сайта',
+            link: '/web'
+          },
+          {
+            title: 'Поддержка сайта',
+            link: '/technical-support'
+          },
+          {
+            title: 'Продвижение сайта',
+            link: '/reklama'
+          }
+        ],
         slider: [
           {
             title: 'Заказать сайт',

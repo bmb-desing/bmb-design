@@ -1,0 +1,55 @@
+@import "../../setting"
+.uslugi
+  min-height: 100vh
+  display: flex
+  align-items: center
+  background-image: url(/img/system/usluga-bg.jpg)
+  -webkit-background-size: cover
+  background-size: cover
+  background-repeat: no-repeat
+  &__wrapper
+    max-width: 1190px
+    width: 100%
+    padding: 0 10px
+    display: flex
+    margin: 0 auto
+    justify-content: space-between
+    align-items: center
+  &__left
+    flex-basis: 40%
+    text-align: left
+  &__right
+    flex-basis: 55%
+  &__title
+    color: #ffffff
+    +fz(48)
+    font-weight: 700
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+    letter-spacing: 1.2px
+    position: relative
+    display: inline-block
+    &::after
+      content: ''
+      position: absolute
+      width: 216px
+      height: 205px
+      opacity: .1
+      left: 50%
+      top: 50%
+      border: solid 12px #e6e6e6
+      transform: translateY(-50%)
+  &__text
+    padding-top: 120px
+    color: #fff
+    +fz(18)
+    font-weight: 400
+    &::after
+      position: relative
+      content: ''
+      width: 80px
+      height: 3px
+      background-color: #e4da18
+      top: 80px
+      display: block

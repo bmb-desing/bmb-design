@@ -30,15 +30,13 @@ module.exports = {
   */
   plugins: [
     { src: '~/plugins/map', ssr: true },
+    { src: '~/plugins/slider', ssr: false },
   ],
   router: {
     linkActiveClass: 'active',
   },
   css: [
     { src: '~/assets/sass/main.sass', lang: 'sass' }
-  ],
-  plugins: [
-    { src: '~/plugins/slider', ssr: false },
   ],
   build: {
     extractCSS: true,

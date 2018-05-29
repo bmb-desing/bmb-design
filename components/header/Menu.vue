@@ -48,8 +48,16 @@
                 text: 'Landing-page'
               },
               {
-                link: 'internet-magazine',
+                link: '/internet-magazin',
                 text: 'Интернет-магазин'
+              },
+              {
+                link: '/korporativniy',
+                text: 'Корпоративный'
+              },
+              {
+                link: '/sayt-vizitka',
+                text: 'Сайт-визитка'
               }
             ]
           },
@@ -57,11 +65,39 @@
             link: '/logo',
             text: 'Логотипы',
             click: 0,
+            submenu: [
+              {
+                link: '/firmeniy-stil',
+                text: 'Фирменный стиль'
+              },
+              {
+                link: '/logotip',
+                text: 'Логотип'
+              }
+            ]
           },
           {
-            link: '/advertising',
+            link: '/reklama',
             text: 'Реклама',
             click: 0,
+            submenu: [
+              {
+                link: '/seo',
+                text: 'СЕО'
+              },
+              {
+                link: '/direkt',
+                text: 'Yandex-Директ'
+              },
+              {
+                link: '/adwords',
+                text: 'GoogleAdwords'
+              },
+              {
+                link: '/offline-reklama',
+                text: 'Offline-Реклама'
+              }
+            ]
           },
           {
             link: '/technical-support',
@@ -75,11 +111,15 @@
             submenu: [
               {
                 link: '/blog',
-                text: 'Новости'
+                text: 'Блог'
               },
               {
-                link: '/review',
+                link: '/otzivi',
                 text: 'Отзывы'
+              },
+              {
+                link: '/portfolio',
+                text: 'Портфолио'
               }
             ]
           },
