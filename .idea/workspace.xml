@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ccf9f53-23f0-49a7-bd63-61a54c1eec5e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/components/error/_index.sass" afterPath="$PROJECT_DIR$/assets/sass/components/error/_index.sass" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/pages/_politica.sass" afterPath="$PROJECT_DIR$/assets/sass/pages/_politica.sass" />
-      <change beforePath="$PROJECT_DIR$/components/modalForm.vue" afterPath="$PROJECT_DIR$/components/modalForm.vue" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/pages/obrabotka-personalnyh-dannyh.vue" afterPath="$PROJECT_DIR$/pages/obrabotka-personalnyh-dannyh.vue" />
+      <change beforePath="$PROJECT_DIR$/static/img/system/obrabotka-personalnyh-dannyh.jpg" afterPath="$PROJECT_DIR$/static/img/system/obrabotka-personalnyh-dannyh.jpg" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,14 +48,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="obrabotka-personalnyh-dannyh.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="obrabotka-personalnyh-dannyh.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/obrabotka-personalnyh-dannyh.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="39" />
+            <state relative-caret-position="359">
+              <caret line="69" column="7" lean-forward="false" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
               <folding>
                 <element signature="n#h1#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../vip-class/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,29 +96,6 @@
             <state relative-caret-position="442">
               <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Time.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/header/Time.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="41" column="16" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainHeader.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/MainHeader.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-              <folding>
-                <element signature="n#div#3;n#div#0;n#header#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#1956#1994#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -139,8 +134,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>h2</find>
       <find>This page could not be found</find>
+      <find>h2</find>
     </findStrings>
     <replaceStrings>
       <replace>span</replace>
@@ -152,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/pages/index.vue" />
         <option value="$PROJECT_DIR$/assets/sass/main.sass" />
         <option value="$PROJECT_DIR$/assets/sass/_setting.sass" />
@@ -186,12 +180,13 @@
         <option value="$PROJECT_DIR$/components/header/Time.vue" />
         <option value="$PROJECT_DIR$/components/MainHeader.vue" />
         <option value="$PROJECT_DIR$/pages/obrabotku-personalnyh-dannyh.vue" />
-        <option value="$PROJECT_DIR$/pages/obrabotka-personalnyh-dannyh.vue" />
         <option value="$PROJECT_DIR$/assets/sass/pages/_politica.sass" />
         <option value="$PROJECT_DIR$/components/modalForm.vue" />
         <option value="$PROJECT_DIR$/.nuxt/client.js" />
         <option value="$PROJECT_DIR$/.nuxt/server.js" />
         <option value="$PROJECT_DIR$/assets/sass/components/error/_index.sass" />
+        <option value="$PROJECT_DIR$/pages/obrabotka-personalnyh-dannyh.vue" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -412,12 +407,12 @@
       <workItem from="1526904560568" duration="12776000" />
       <workItem from="1526975081996" duration="13591000" />
       <workItem from="1527059501445" duration="12257000" />
-      <workItem from="1527582073083" duration="5833000" />
+      <workItem from="1527582073083" duration="6072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61537000" />
+    <option name="totallyTimeSpent" value="61776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -465,18 +460,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/play-button.svg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vip-class/plugins/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../vip-class/components/pages/Contacts.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -855,11 +838,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/obrabotka-personalnyh-dannyh.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="39" />
+        <state relative-caret-position="359">
+          <caret line="69" column="7" lean-forward="false" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
           <folding>
             <element signature="n#h1#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vip-class/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

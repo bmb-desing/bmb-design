@@ -63,7 +63,12 @@
 
 <script>
 	export default {
-		name: "obrabotka-personalnyh-dannyh"
+		name: "obrabotka-personalnyh-dannyh",
+    head() {
+		  return {
+		    title: 'Обработка персональных данных'
+      }
+    }
 	}
 </script>
 
