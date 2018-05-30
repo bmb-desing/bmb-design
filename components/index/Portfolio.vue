@@ -13,11 +13,9 @@
         </div>
       </div>
       <div class="portfolio__right">
-          <transition name="fadeDown" tag="div">
-            <div class="portfolio__items" v-for="(item, k) in portfolio" :key="k" v-if="k == active">
-              <portfolio-item :item="val" v-for="(val, i) in item.works" :key="i" class="item" :class="'item_' + (i + 1)"></portfolio-item>
-            </div>
-          </transition>
+          <div class="portfolio__items" v-for="(item, k) in portfolio" :key="k" v-if="k == active">
+            <portfolio-item :item="val" :index="i" v-for="(val, i) in item.works" :key="i" class="item" :class="'item_' + (i + 1)"></portfolio-item>
+          </div>
       </div>
     </div>
   </div>
