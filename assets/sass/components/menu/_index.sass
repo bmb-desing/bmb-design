@@ -10,7 +10,8 @@
   left: 0
   right: 0
   &__container
-    max-width: 1170px
+    max-width: 1190px
+    padding: 0 10px
     width: 100%
     margin: 0 auto
     position: relative
@@ -95,3 +96,25 @@
     right: 0
     border-top: 1px solid rgba(#fff, .4)
     height: 60px
+@media screen and (max-width: 768px)
+  .menu
+    top: 60px
+@media screen and (max-width: 600px)
+  .menu
+    &__contacts
+      display: none
+    &__left
+      flex-basis: 50%
+    &__center
+      flex-basis: 50%
+@media screen and (max-width: 480px)
+  .menu
+    &__center
+      padding-left: 10px
+@media screen and (max-height: 560px)
+  .menu
+    &__content
+      padding: 1vh 0
+    //overflow: auto
+    &__footer
+      //position: relative

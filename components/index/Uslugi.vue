@@ -13,7 +13,9 @@
       </div>
       <div class="uslugi__right">
         <nuxt-link :to="usluga.link" class="usluga" v-for="(usluga, k) in uslugi" :key="k">
+          <img v-lazy="usluga.image" :alt="usluga.title" class="usluga__img">
           <h3 class="usluga__title">{{usluga.title}}</h3>
+          <div class="usluga__text" v-html="usluga.text"></div>
         </nuxt-link>
       </div>
     </div>

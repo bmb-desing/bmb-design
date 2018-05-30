@@ -1,0 +1,39 @@
+@import "../../setting"
+.item
+  flex-basis: 50%
+  position: relative
+  cursor: pointer
+  overflow: hidden
+  &__image
+    max-height: 50vh
+    text-align: center
+    img
+      height: 100%
+      vertical-align: top
+  &__content
+    position: absolute
+    bottom: -150px
+    left: 0
+    right: 0
+    transition: all .25s
+    text-align: center
+    background-color: rgba(#000000, .5)
+    padding: 10px
+    color: #e4da18
+  &:hover
+    .item
+      &__content
+        bottom: 0
+  &__name
+    padding: 0
+    margin: 0
+    +fz(18)
+    font-weight: 500
+    &::after
+      content: ''
+      display: block
+      position: relative
+      width: 50px
+      margin: 5px auto 5px
+      height: 3px
+      background-color: #e4da18

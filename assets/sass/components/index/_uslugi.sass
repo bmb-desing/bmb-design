@@ -16,10 +16,16 @@
     justify-content: space-between
     align-items: center
   &__left
-    flex-basis: 40%
+    flex-basis: 35%
     text-align: left
   &__right
-    flex-basis: 55%
+    flex-basis: 63%
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    background-color: rgba(#fff, .9)
+    padding: 40px 40px 0px
   &__title
     color: #ffffff
     +fz(48)
@@ -39,7 +45,7 @@
       left: 50%
       top: 50%
       border: solid 12px #e6e6e6
-      transform: translateY(-50%)
+      transform: translateY(-50%) translateX(-50%)
   &__text
     padding-top: 120px
     color: #fff
@@ -50,6 +56,67 @@
       content: ''
       width: 80px
       height: 3px
-      background-color: #e4da18
+      background-color: #ecc84c
       top: 80px
       display: block
+.usluga
+  flex-basis: (100/2  - 5) + 0%
+  text-align: left
+  margin-bottom: 40px
+  text-decoration: none
+  &__title
+    +fz(18)
+    font-weight: 700
+    text-transform: uppercase
+    color: #000
+    padding: 0
+    margin: 15px 0
+    position: relative
+    &::after
+      position: relative
+      display: block
+      content: ''
+      width: 30px
+      height: 2px
+      background-color: #ecc84c
+      margin-top: 10px
+  &__img
+    vertical-align: top
+    max-width: 48px
+  &__text
+    +fz(14)
+    color: #000
+@media screen and (max-width: 1200px)
+  .uslugi
+    &__title
+      +fz(35)
+    &__text
+      +fz(16)
+      &::after
+        display: none
+@media screen and (max-width: 992px)
+  .uslugi
+    &__wrapper
+      flex-wrap: wrap
+      padding-bottom: 30px
+    &__left
+      flex-basis: 100%
+    &__right
+      flex-basis: 100%
+    &__title
+      text-align: center
+      display: block
+      padding: 20px 0
+      &::after
+        display: none
+    &__text
+      padding: 0
+      padding-bottom: 30px
+
+@media screen and (max-width: 768px)
+  .uslugi
+    &__right
+      padding: 20px
+      padding-bottom: 0
+  .usluga
+    flex-basis: 100%

@@ -31,12 +31,19 @@ module.exports = {
   plugins: [
     { src: '~/plugins/map', ssr: true },
     { src: '~/plugins/slider', ssr: false },
+    '~/plugins/loader'
   ],
   router: {
     linkActiveClass: 'active',
   },
   css: [
-    { src: '~/assets/sass/main.sass', lang: 'sass' }
+    { src: '~/assets/sass/main.sass', lang: 'sass' },
+    { src: 'vue2-animate/dist/vue2-animate.min.css', lang: 'css'}
+  ],
+  vendor: [
+    '~/plugins/slider',
+    '~/plugins/map',
+    '~/plugins/loader'
   ],
   build: {
     extractCSS: true,
