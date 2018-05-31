@@ -4,6 +4,7 @@
       <sliders :slider="slider"></sliders>
       <uslugi :uslugi="uslugi"></uslugi>
       <portfolio :portfolio="portfolio"></portfolio>
+      <blog :blog="blog"></blog>
     </div>
   </section>
 </template>
@@ -12,11 +13,13 @@
   import Sliders from '~/components/index/Slider'
   import Uslugi from '~/components/index/Uslugi'
   import Portfolio from '~/components/index/Portfolio'
+  import Blog from '~/components/index/Blog'
   export default {
     components: {
       Sliders,
       Uslugi,
-      Portfolio
+      Portfolio,
+      Blog
     },
     data() {
       return {
@@ -222,6 +225,30 @@
               }
             ]
           }
+        ],
+        blog: [
+          {
+            id: 1,
+            title: 'Статья 1',
+            shortText: 'Короткий текст первой статьи',
+            favicon: '/img/slider/slide-1.jpg',
+            alias: 'statiya-1',
+          },
+          {
+            id: 2,
+            title: 'Статья 2',
+            shortText: 'Короткий текст второй статьи',
+            favicon: '/img/slider/slide-1.jpg',
+            alias: 'statiya-2',
+          },
+          {
+            id: 3,
+            title: 'Статья 3',
+            shortText: 'Короткий текст третьей статьи',
+            favicon: '/img/slider/slide-1.jpg',
+            alias: 'statiya-3',
+          },
+
         ]
       }
     }

@@ -1,0 +1,96 @@
+@import "../../setting"
+.blog
+  min-height: 100vh
+  display: flex
+  align-items: center
+  &__wrapper
+    max-width: 1190px
+    width: 100%
+    padding: 0 10px
+    display: flex
+    margin: 0 auto
+    justify-content: space-between
+    align-items: center
+  &__left
+    flex-basis: 35%
+  &__right
+    flex-basis: 60%
+  &__title
+    position: relative
+    text-transform: uppercase
+    +fz(48)
+    padding: 0
+    margin: 0
+    color: #000
+    padding-left: 10px
+    font-weight: 700
+    &::after
+      content: ''
+      position: absolute
+      width: 268px
+      height: 268px
+      border: solid 12px #7a7a7a
+      opacity: .3
+      bottom: 50%
+      transform: translateY(50%)
+      left: -5px
+  &__button
+    margin-top: 20vh
+    text-align: center
+    a
+      border: none
+      text-decoration: none
+      color: #000
+      font-weight: 900
+      text-transform: uppercase
+      padding: 10px 30px
+      background-color: #ecc84c
+      transition: all .25s
+      &:hover
+        background-color: darken(#ecc84c, 10%)
+.item
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 20px
+  &__left
+    flex-basis: 50%
+    text-align: center
+    img
+      vertical-align: middle
+      max-width: 100%
+  &__right
+    flex-basis: 50%
+    padding-left: 25px
+  h3
+    padding: 0
+    margin: 0
+    margin-bottom: 5px
+    a
+      text-decoration: none
+      color: #000
+      text-transform: uppercase
+      +fz(20)
+      font-weight: 700
+  &__link
+    border: none
+    text-decoration: none
+    color: #000
+    font-weight: 900
+    display: block
+    text-align: center
+    +fz(14)
+    margin-top: 20px
+    text-transform: uppercase
+    padding: 5px 30px
+    background-color: #ecc84c
+    transition: all .25s
+    &:hover
+      background-color: darken(#ecc84c, 10%)
+  &__date
+    height: 25px
+    line-height: 25px
+    padding-left: 30px
+    background-image: url(/img/system/icons/time.png)
+    background-repeat: no-repeat
+    background-position: left center
