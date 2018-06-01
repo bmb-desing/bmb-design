@@ -5,6 +5,7 @@
       <uslugi :uslugi="uslugi"></uslugi>
       <portfolio :portfolio="portfolio"></portfolio>
       <blog :blog="blog"></blog>
+      <contacts></contacts>
     </div>
   </section>
 </template>
@@ -14,12 +15,14 @@
   import Uslugi from '~/components/index/Uslugi'
   import Portfolio from '~/components/index/Portfolio'
   import Blog from '~/components/index/Blog'
+  import Contacts from '~/components/index/Contacts'
   export default {
     components: {
       Sliders,
       Uslugi,
       Portfolio,
-      Blog
+      Blog,
+      Contacts
     },
     data() {
       return {
