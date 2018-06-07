@@ -13,9 +13,11 @@
         </div>
       </div>
       <div class="portfolio__right">
+        <transition :enter-active-class="active == 0 || active == 2 ? 'bounceInLeft' : 'bounceInRight'" :leave-active-class="active == 0 || active == 2 ? 'bounceOutLeft' : 'bounceOutRight'" name="bounce">
           <div class="portfolio__items" v-for="(item, k) in portfolio" :key="k" v-if="k == active">
-            <portfolio-item :item="val" :index="i" v-for="(val, i) in item.works" :key="i" class="item" :class="'item_' + (i + 1)"></portfolio-item>
+            <portfolio-item :item="val" v-for="(val, i) in item.works" :key="i" class="item" :class="'item_' + (i + 1)"></portfolio-item>
           </div>
+        </transition>
       </div>
     </div>
   </div>

@@ -1,0 +1,59 @@
+@import "../../setting"
+.contacts
+  min-height: 100vh
+  -webkit-background-size: cover
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: url(/img/system/contacts-bg.jpg)
+  display: flex
+  align-items: center
+  &__wrapper
+    max-width: 1190px
+    width: 100%
+    padding: 0 10px
+    margin: 0 auto
+    text-align: center
+  &__item
+    padding-bottom: 2vh
+    a, span
+      color: #ffffff
+      text-decoration: none
+      +fz(28)
+      font-weight: 100
+
+.menu__footer
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-top: 70px
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    display: block
+    width: 50%
+    max-width: 100px
+    top: 10px
+    height: 4px
+    background-color: #ecc84c
+.social
+  &__item
+    padding: 0 1vw
+    a
+      display: block
+      height: 24px
+      width: 24px
+      background-repeat: no-repeat
+      background-position: center
+    &_telegram
+      a
+        background-image: url(/img/system/icons/telegram.png)
+    &_facebook
+      a
+        background-image: url(/img/system/icons/facebook.png)
+    &_vk
+      a
+        background-image: url(/img/system/icons/vk.png)
+    &_inst
+      a
+        background-image: url(/img/system/icons/inst.png)

@@ -3,6 +3,7 @@
     <main-header></main-header>
     <div class="body">
       <nuxt/>
+      <main-footer></main-footer>
     </div>
     <callback-form v-if="getShowForm"></callback-form>
   </div>
@@ -10,12 +11,14 @@
 <script>
   import MainHeader from '~/components/MainHeader'
   import CallbackForm from '~/components/modalForm'
+  import MainFooter from '~/components/MainFooter'
   import {mapGetters} from 'vuex'
   export default {
     middleware: ['pages'],
     components: {
       MainHeader,
-      CallbackForm
+      CallbackForm,
+      MainFooter
     },
     computed: {
       ...mapGetters({

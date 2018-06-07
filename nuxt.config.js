@@ -3,12 +3,17 @@ module.exports = {
   ** Headers of the page
   */
   modules: [
+    '@nuxtjs/axios',
     [
       'nuxt-validate', {
       lang: 'ru'
     }
     ]
   ],
+  axios: {
+    host: 'localhost',
+    port: '3001'
+  },
   head: {
     title: 'Веб-Студия Бамбей',
     meta: [
@@ -31,7 +36,8 @@ module.exports = {
   plugins: [
     { src: '~/plugins/map', ssr: true },
     { src: '~/plugins/slider', ssr: false },
-    '~/plugins/loader'
+    '~/plugins/loader',
+    '~/plugins/axios'
   ],
   router: {
     linkActiveClass: 'active',

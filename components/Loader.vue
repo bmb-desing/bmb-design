@@ -60,7 +60,10 @@
         return this
       },
       finish() {
-        this.show = false
+		    const vm = this
+        setTimeout(function () {
+          vm.show = false
+        }, 200)
         return this
       },
       fail() {

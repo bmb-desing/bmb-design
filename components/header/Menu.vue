@@ -20,18 +20,48 @@
             </div>
           </div>
           <div class="menu__contacts">
-            <p>123</p>
+            <div class="contacts__item contacts__item_map">
+              <span>ул. Соловьева 4а, оф.1</span>
+            </div>
+            <div class="contacts__item contacts__item_email">
+              <a href="mailto:info@bmb-design.ru">info@bmb-design.ru</a>
+            </div>
+            <div class="contacts__item contacts__item_phone">
+              <a href="tel:+79781004939">+7 (978) 100 49 39</a>
+            </div>
+            <div class="contacts__item contacts__item_phone">
+              <a href="tel:+79781004939">+7 (978) 100 49 39</a>
+            </div>
+            <div class="contacts__item contacts__item_callback">
+              <button @click="showForm">Обратный звонок</button>
+            </div>
           </div>
         </div>
       </div>
       <div class="menu__footer">
-
+        <div class="social__item social__item_telegram">
+          <a href="#" target="_blank">
+          </a>
+        </div>
+        <div class="social__item social__item_facebook">
+          <a href="#" target="_blank">
+          </a>
+        </div>
+        <div class="social__item social__item_vk">
+          <a href="#" target="_blank">
+          </a>
+        </div>
+        <div class="social__item social__item_inst">
+          <a href="#" target="_blank">
+          </a>
+        </div>
       </div>
     </div>
   </transition>
 </template>
 
 <script>
+  import {mapMutations} from 'vuex'
 	export default {
 		name: "head-menu",
     data() {
@@ -161,7 +191,10 @@
           }
         })
         return this.activeMenu = indexs || false
-      }
+      },
+      ...mapMutations({
+        showForm: 'mutationShowForm'
+      }),
     },
     created: function () {
       const path = this.$route.path;
@@ -184,6 +217,7 @@
 
 <style scoped lang="sass">
   @import "../../assets/sass/components/menu/index"
+  @import "../../assets/sass/components/menu/contacts"
   .menu-enter-active, .menu-leave-active
     transition: max-height .25s
   .menu-enter
