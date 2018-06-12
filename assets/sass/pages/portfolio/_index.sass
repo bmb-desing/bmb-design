@@ -1,0 +1,108 @@
+@import "../../setting"
+
+.portfolio
+  min-height: 100vh
+  padding-top: 80px
+  &__header
+    max-width: 1190px
+    padding: 0 10px
+    width: 100%
+    margin: 0 auto
+  &__title
+    text-align: center
+    text-transform: uppercase
+    +fz(40)
+    font-weight: 700
+    padding: 10px 0
+    margin: 0
+
+  &__filters
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__filter
+    padding-right: 20px
+    &:last-child
+      padding-right: 0
+    select
+      height: 30px
+      outline: none
+      cursor: pointer
+      padding-right: 20px
+      padding-left: 5px
+      &:hover
+        outline: none
+    span
+      +fz(15)
+      font-weight: 100
+  &__image
+    img
+      max-width: 100%
+      vertical-align: middle
+  &__content
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding: 20px 0
+  &__paginator
+    text-align: center
+    ul
+      list-style-type: none
+      display: flex
+      align-items: center
+      justify-content: center
+      li
+        padding: 0 5px
+        a
+          line-height: 30px
+          display: block
+          width: 30px
+          height: 30px
+          background-color: #fff
+          text-decoration: none
+          color: #000
+          &.nuxt-link-exact-active
+            background-color: #a35100
+            color: #ffff
+  &__loader
+    padding: 20px 0
+    min-height: 500px
+    background-image: url(/img/system/loader-white.gif)
+    background-repeat: no-repeat
+    background-position: center
+  &__text
+    text-align: center
+    position: absolute
+    bottom: -50%
+    transition: all .25s
+    left: 0
+    right: 0
+    background-color: rgba(#000, .7)
+    color: #ecc84c
+    padding: 10px 0
+    h2
+      padding: 0
+      margin: 0
+      position: relative
+      font-weight: 500
+      padding-bottom: 5px
+      +fz(18)
+      &::after
+        content: ''
+        display: block
+        position: relative
+        height: 2px
+        width: 50px
+        background-color: #ecc84c
+        margin: 0 auto
+        margin-top: 5px
+  &__hash
+    +fz(14)
+  &__item
+    position: relative
+    overflow: hidden
+    &:hover
+     .portfolio
+       &__text
+         bottom: 0
+

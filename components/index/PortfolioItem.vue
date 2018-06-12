@@ -1,8 +1,7 @@
 <template>
-  <nuxt-link :to="'/about/portfolio/' + item.alias">
+  <nuxt-link :to="'/about/portfolio/' + item.link">
     <div class="item__image">
       <img :src="item.image" :alt="item.name">
-      {{item.id}}
     </div>
     <div class="item__content">
       <h3 class="item__name">{{item.name}}</h3>

@@ -5,7 +5,6 @@
       <uslugi :uslugi="uslugi"></uslugi>
       <portfolio :portfolio="portfolio"></portfolio>
       <blog :blog="blog"></blog>
-      <contacts></contacts>
     </div>
   </section>
 </template>
@@ -15,14 +14,12 @@
   import Uslugi from '~/components/index/Uslugi'
   import Portfolio from '~/components/index/Portfolio'
   import Blog from '~/components/index/Blog'
-  import Contacts from '~/components/index/Contacts'
   export default {
     components: {
       Sliders,
       Uslugi,
       Portfolio,
       Blog,
-      Contacts
     },
     data() {
       return {
@@ -89,8 +86,8 @@
         ],
         portfolio: [
           {
-            name: 'СОЗДАНИЕ САЙТОВ',
-            alias: 'sozdaniy-saytov',
+            name: 'Сайты',
+            alias: 'web',
             id: 1,
             works: [
               {
@@ -124,8 +121,8 @@
             ]
           },
           {
-            name: 'СОЗДАНИЕ ЛОГОТИПА',
-            alias: 'sozdanie-logotipa',
+            name: 'Логотипы',
+            alias: 'logo',
             id: 2,
             works: [
               {
@@ -159,8 +156,8 @@
             ]
           },
           {
-            name: 'РАЗРАБОТКА БРЕНДА',
-            alias: 'razrabotka-brenda',
+            name: 'Реклама',
+            alias: 'reklama',
             id: 3,
             works: [
               {
@@ -194,8 +191,8 @@
             ]
           },
           {
-            name: 'Продвижение сайта',
-            alias: 'prodvishenie-sayta',
+            name: 'Тех. поддержка',
+            alias: 'technical-support',
             id: 4,
             works: [
               {
