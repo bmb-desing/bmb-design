@@ -150,6 +150,10 @@
               {
                 link: '/portfolio',
                 text: 'Портфолио'
+              },
+              {
+                link: '/team',
+                text: 'Команда'
               }
             ]
           },

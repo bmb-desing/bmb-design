@@ -1,0 +1,58 @@
+@import "../../setting"
+.portfolio
+  min-height: 100vh
+  padding-top: 80px
+  padding-left: 10px
+  padding-right: 10px
+  max-width: 1190px
+  width: 100%
+  margin: 0 auto
+  &__title
+    text-align: center
+    text-transform: uppercase
+    +fz(35)
+    padding: 0
+    margin: 0
+    padding-top: 15px
+    font-weight: 700
+    color: #ecc84c
+  &__content
+    padding: 30px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+  &__left
+    flex-basis: 50%
+    overflow: hidden
+    position: relative
+  &__right
+    flex-basis: 45%
+  &__categories, &__users
+    padding-top: 10px
+    span
+      font-weight: bold
+      +fz(17)
+      margin-right: 5px
+    a
+      text-decoration: none
+      color: #a35100
+      margin-right: 5px
+  h2
+    +fz(20)
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+    color: #000
+    font-weight: bold
+    padding-top: 10px
+    padding-bottom: 10px
+  &__button
+    margin-bottom: 10px
+    border: none
+    background-color: #a35100
+    padding: 10px 40px
+    cursor: pointer
+    text-transform: uppercase
+    font-weight: bold
+    color: #fff
