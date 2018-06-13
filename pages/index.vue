@@ -21,6 +21,12 @@
       Portfolio,
       Blog,
     },
+    async asyncData({app}) {
+      const portfolio = await app.$axios.get('/works');
+      return {
+        portfolio: portfolio.data
+      }
+    },
     data() {
       return {
         uslugi: [
@@ -83,148 +89,6 @@
             text: 'Создадим сайт, логотип, рекламу,<br/>с анализом вашего бизнеса от 10.000<br/> рублей от 6 дней',
             image: '/img/slider/slide-1.jpg'
           },
-        ],
-        portfolio: [
-          {
-            name: 'Сайты',
-            alias: 'web',
-            id: 1,
-            works: [
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 1,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 2,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 3,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 4,
-                image: '/img/slider/slide-1.jpg'
-              }
-            ]
-          },
-          {
-            name: 'Логотипы',
-            alias: 'logo',
-            id: 2,
-            works: [
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 5,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 6,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 7,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 8,
-                image: '/img/slider/slide-1.jpg'
-              }
-            ]
-          },
-          {
-            name: 'Реклама',
-            alias: 'reklama',
-            id: 3,
-            works: [
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 9,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 10,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 11,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 12,
-                image: '/img/slider/slide-1.jpg'
-              }
-            ]
-          },
-          {
-            name: 'Тех. поддержка',
-            alias: 'technical-support',
-            id: 4,
-            works: [
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 13,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 14,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 15,
-                image: '/img/slider/slide-1.jpg'
-              },
-              {
-                name: 'Фитнес-тренер',
-                type: 'Сео / дизайн',
-                link: 'fitnes-trener',
-                id: 16,
-                image: '/img/slider/slide-1.jpg'
-              }
-            ]
-          }
         ],
         blog: [
           {

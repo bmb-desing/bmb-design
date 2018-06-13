@@ -1,11 +1,11 @@
 <template>
-  <nuxt-link :to="'/about/portfolio/' + item.link">
+  <nuxt-link :to="'/about/portfolio/' + item.alias">
     <div class="item__image">
-      <img :src="item.image" :alt="item.name">
+      <img :src="item.thumbnail" :alt="item.name">
     </div>
     <div class="item__content">
       <h3 class="item__name">{{item.name}}</h3>
-      <div class="item__types">{{item.type}}</div>
+      <div class="item__types">{{item.types}}</div>
     </div>
   </nuxt-link>
 </template>
