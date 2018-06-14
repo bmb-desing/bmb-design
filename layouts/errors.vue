@@ -10,6 +10,7 @@
 	}
 </script>
 
-<style>
-
+<style lang="sass" scoped>
+  .contacts
+    display: none
 </style>

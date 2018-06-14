@@ -12,7 +12,7 @@
           <div class="portfolio__text" v-html="portfolio.text"></div>
           <div class="portfolio__users">
             <span>В проекте участвовали:</span>
-            <nuxt-link :to="'/about/team/'+ index" v-for="(item, index) in portfolio.user" :key="item.id" class="portfolio__team">{{item.first_name}} {{item.last_name}}</nuxt-link>
+            <nuxt-link :to="'/about/team/'+ item.alias" v-for="item in portfolio.user" :key="item.id" class="portfolio__team">{{item.first_name}} {{item.last_name}}</nuxt-link>
           </div>
           <div class="portfolio__categories">
             <span>Категории:</span>
@@ -28,18 +28,23 @@
     </div>
     <div class="other">
       <h2>Другие наши работы</h2>
+      <div class="other__items">
+        <porfolio-item v-for="item in other" :key="item.id" :portfolio="item" :style="'flex-basis:' + getWidth"></porfolio-item>
+      </div>
     </div>
   </div>
 
 </template>
 
 <script>
+  import PorfolioItem from '~/components/pages/Portfolio'
   import Slider from '~/components/Slider'
   import {mapMutations} from 'vuex'
 	export default {
 		name: "item",
     components: {
-		  Slider
+      Slider,
+      PorfolioItem
     },
     head() {
 		  return {
@@ -57,9 +62,17 @@
     },
     async asyncData({app, route}) {
 		  const alias = route.params.item;
-		  const portfolio = await app.$axios.get('/works/item/' + alias)
-      return {
-		    portfolio: portfolio.data
+      const portfolio = await app.$axios.get('/works/item/' + alias)
+      if(portfolio.data) {
+        return {
+          portfolio: portfolio.data.work,
+          other: portfolio.data.other
+        }
+      }
+    },
+    computed: {
+      getWidth() {
+        return 100 / 3 + '%'
       }
     },
     methods: {

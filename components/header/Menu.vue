@@ -144,7 +144,7 @@
                 text: 'Блог'
               },
               {
-                link: '/otzivi',
+                link: '/review',
                 text: 'Отзывы'
               },
               {

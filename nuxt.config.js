@@ -23,7 +23,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto'}
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Ubuntu'}
     ]
   },
   /*
@@ -37,7 +37,8 @@ module.exports = {
     { src: '~/plugins/map', ssr: true },
     { src: '~/plugins/slider', ssr: false },
     '~/plugins/loader',
-    '~/plugins/axios'
+    '~/plugins/axios',
+    '~/plugins/popup',
   ],
   router: {
     linkActiveClass: 'active',
@@ -49,7 +50,8 @@ module.exports = {
   vendor: [
     '~/plugins/slider',
     '~/plugins/map',
-    '~/plugins/loader'
+    '~/plugins/loader',
+    '~/plugins/popup',
   ],
   build: {
     extractCSS: true,

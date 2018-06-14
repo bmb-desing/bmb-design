@@ -99,11 +99,12 @@
     },
 		name: "error",
     props: ['error'],
-    layout: 'errorses',
+    layout: 'errors',
 	}
 </script>
 
 <style scoped lang="sass">
   @import "../assets/sass/system/loader"
   @import "../assets/sass/components/error/_index.sass"
+
 </style>

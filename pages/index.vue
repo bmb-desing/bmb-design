@@ -23,8 +23,10 @@
     },
     async asyncData({app}) {
       const portfolio = await app.$axios.get('/works');
+      const blog = await app.$axios.get('/news');
       return {
-        portfolio: portfolio.data
+        portfolio: portfolio.data,
+        blog: blog.data
       }
     },
     data() {
@@ -90,30 +92,6 @@
             image: '/img/slider/slide-1.jpg'
           },
         ],
-        blog: [
-          {
-            id: 1,
-            title: 'Статья 1',
-            shortText: 'Короткий текст первой статьи',
-            favicon: '/img/slider/slide-1.jpg',
-            alias: 'statiya-1',
-          },
-          {
-            id: 2,
-            title: 'Статья 2',
-            shortText: 'Короткий текст второй статьи',
-            favicon: '/img/slider/slide-1.jpg',
-            alias: 'statiya-2',
-          },
-          {
-            id: 3,
-            title: 'Статья 3',
-            shortText: 'Короткий текст третьей статьи',
-            favicon: '/img/slider/slide-1.jpg',
-            alias: 'statiya-3',
-          },
-
-        ]
       }
     }
   }

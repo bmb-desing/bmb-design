@@ -1,0 +1,52 @@
+@import "../../setting"
+
+.team
+  &__item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 10px
+    &_left
+      flex-direction: row-reverse
+      .team
+        &__content
+          padding-right: 20px
+          text-align: right
+        &__title
+          padding-right: 20px
+          text-align: right
+    &_right
+      .team
+        &__content
+          padding-left: 20px
+          text-align: left
+        &__title
+          padding-left: 20px
+          text-align: left
+  &__left
+    flex-basis: 50%
+    img
+      width: 100%
+      vertical-align: top
+  &__right
+    flex-basis: 50%
+  &__title
+    padding: 0
+    margin: 0
+    padding-bottom: 10px
+    +fz(25)
+    a
+      text-decoration: none
+      color: #000
+  &__position
+    +fz(20)
+    color: #a35100
+    font-weight: bold
+    padding-bottom: 10px
+  &__count
+    padding-top: 10px
+    span
+      +fz(20)
+      color: #a35100
+      font-weight: bold
+  

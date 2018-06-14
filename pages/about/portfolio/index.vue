@@ -24,21 +24,11 @@
       <div v-if="loading != true">
         <div class="portfolio__wrapper" >
           <div class="portfolio__content">
-            <nuxt-link :to="'/about/portfolio/' + item.alias" class="portfolio__item" v-for="item in portfolio" :key="item.id" :style="{flexBasis: getWidth}">
-              <div class="portfolio__image">
-                <img :src="item.thumbnail" :alt="item.name">
-              </div>
-              <div class="portfolio__text">
-                <h2>{{item.name}}</h2>
-                <div class="portfolio__hash">
-                  {{item.types}}
-                </div>
-              </div>
-            </nuxt-link>
+            <portfolio-item v-for="item in portfolio" :key="item.id" :style="'flex-basis:' +getWidth " :portfolio="item"></portfolio-item>
           </div>
           <div class="portfolio__paginator" v-if="pages != 1">
             <ul >
-              <li v-for="n in pages">
+              <li v-for="n in pages" :key="n">
                 <nuxt-link :to="{query: {type: activeFilter, count: showInRow, page: n != 1 ? n : undefined}}" :class="{'nuxt-link-exact-active' : !$route.query.page && n == 1}">
                   {{n}}
                 </nuxt-link>
@@ -52,17 +42,22 @@
 </template>
 
 <script>
+  import PortfolioItem from '~/components/pages/Portfolio'
 	export default {
 		name: "portfolio",
 		head() {
 			return {
 				title: 'Наши работы'
 			}
-		},
+    },
+    components: {
+      PortfolioItem
+    },
     async asyncData({app, route}) {
 		  const limit = route.query.count || 3
       const type = route.query.type || null
-      if(type != 'null') {
+      console.log(route.query.type)
+      if(!type) {
         const portfolio = await app.$axios.get('/works/all?count=' + limit)
         return {
           portfolio: portfolio.data.works,

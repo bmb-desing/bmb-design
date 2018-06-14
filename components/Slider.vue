@@ -1,7 +1,7 @@
 <template>
   <slick ref="slick" :options="slickOptions" class="slick-slider">
     <div class="sliders" v-for="item in images" :key="item.id">
-      <img :src="item.image" :alt="item.alt">
+      <img v-img:portfolio :src="item.image" :alt="item.alt">
     </div>
   </slick>
 </template>

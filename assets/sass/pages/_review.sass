@@ -1,0 +1,111 @@
+@import "../setting"
+.review
+  min-height: 100vh
+  max-width: 1190px
+  width: 100%
+  margin: 0 auto
+  padding: 80px 10px
+  &__title
+    padding: 20px 0 10px
+    margin: 0
+    +fz(40)
+    text-transform: uppercase
+    font-weight: bold
+    text-align: center
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    flex-wrap: wrap
+  &__item
+    flex-basis: 49%
+    //background-color: darken(#fff, 10%)
+    padding: 20px
+    margin-bottom: 20px
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 15px
+  &__left
+    text-align: center
+  &__right
+    flex-basis: 100%
+    text-align: left
+    padding-left: 20px
+    align-items: center
+    display: flex
+    justify-content: space-between
+    h3
+      padding: 0
+      margin: 0
+      color: #a35100
+      +fz(20)
+  &__image
+    max-width: 100px
+    vertical-align: top
+  &__button
+    display: inline-block
+    width: 30px
+    height: 30px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 100% 100%
+    margin-right: 10px
+    position: relative
+    &:last-child
+      margin-right: 0
+    &_video
+      background-image: url('/img/system/icons/play.png')
+    &_document
+      background-image: url('/img/system/icons/file.png')
+      img
+        position: absolute
+        opacity: 0
+        left: 0
+        right: 0
+        height: 100%
+        width: 100%
+  &__text
+    +fz(14)
+  &__load
+    padding-top: 15px
+    width: 100%
+    text-align: center
+    button
+      border: none
+      cursor: pointer
+      padding: 10px 25px
+      background-color: #ecc84c
+      +fz(17)
+      font-weight: bold
+  &__form
+    text-align: center
+    max-width: 300px
+    padding: 10px
+    width: 100%
+    margin: 0 auto
+    .form
+      &__item
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+        input, textarea
+          width: 100%
+          padding: 5px
+          outline: none
+          border: none
+          +fz(16)
+          border-bottom: 1px solid #ecc84c
+          &::placeholder
+            color: #000
+            opacity: 1
+        textarea
+          resize: vertical
+  .error
+    color: red
+    +fz(13)
+  .good
+    color: green
+    padding-top: 10px
+    +fz(16)

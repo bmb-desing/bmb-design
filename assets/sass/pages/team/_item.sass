@@ -1,0 +1,45 @@
+@import "../../setting"
+
+.team
+  min-height: 100vh
+  padding: 80px 0
+  h1, h2
+    text-align: center
+  &__title
+    +fz(40)
+    font-weight: bold
+    padding: 20px 0 5px
+    margin: 0
+    color: #000000
+  &__position
+    +fz(25)
+    color: #a35100
+    padding: 0
+    margin: 0
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1190px
+    width: 100%
+    margin: 0 auto
+    padding: 30px 10px 0
+  &__left
+    flex-basis: 45%
+    img
+      max-width: 100%
+  &__right
+    flex-basis: 50%
+  &__container
+    display: flex
+    flex-wrap: wrap
+  &__button
+    padding-top: 20px
+    text-align: center
+    button
+      border: none
+      cursor: pointer
+      padding: 10px 25px
+      background-color: #ecc84c
+      +fz(17)
+      font-weight: bold
